@@ -1,3 +1,21 @@
+/*
+ * 由@fishingworld编写
+ * 原脚本地址: https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js
+ * 由@HuaWeixiang修改
+ * 更新日期: 2023.05.20
+ * 版本: 1.0
+ * 
+ * 面板示例↓↓↓
+ * [Panel]
+ * TrafficStatistics = script-name=TrafficStatistics,update-interval=1
+ * [Script]
+ * TrafficStatistics = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/TrafficStatistics.js,script-update-interval=0,argument=title=流量统计&icon=speedometer&color=#ff6666
+ * 脚本参数说明:
+ * 可选参数"title=xxx" 可以自定义标题
+ * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=speedometer",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
+ * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff6666"
+ */
+ 
 ;(async () => {
   let traffic = (await httpAPI("/v1/traffic"));
   let interface = traffic.interface;

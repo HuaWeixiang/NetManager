@@ -1,3 +1,21 @@
+/*
+ * 由@fishingworld编写
+ * 原脚本地址: https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js
+ * 由@HuaWeixiang修改
+ * 更新日期: 2023.05.20
+ * 版本: 1.0
+ * 
+ * 面板示例↓↓↓
+ * [Panel]
+ * SurgePro = script-name=SurgePro,update-interval=1
+ * [Script]
+ * SurgePro = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/SurgePro-ReloadProfiles.js,script-update-interval=0,argument=title=Surge Pro®&icon=crown.fill&color=#ffd700
+ * 脚本参数说明:
+ * 可选参数"title=xxx" 可以自定义标题
+ * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=crown.fill",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
+ * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ffd700"
+ */
+ 
 !(async () => {
   //时间获取
   let traffic = (await httpAPI("/v1/traffic","GET"));
@@ -14,7 +32,7 @@
   //panel设置
   let panel = {
     title:"Surge Pro®",
-    content:`启动时长: ${startTime}`+"\nMitM:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content:`启动时长: ${startTime}`+"\nMitM: "+icon_status(mitm_status.enabled)+"  Rewrite: "+icon_status(rewrite_status.enabled)+"  Scripting: "+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle.fill",
     "icon-color": icon_s?"#ffd700":"#f20c00",
   };

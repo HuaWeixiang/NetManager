@@ -1,3 +1,19 @@
+/*
+ * 由@HuaWeixiang编写
+ * 更新日期: 2023.05.20
+ * 版本: 1.0
+ * 
+ * 面板示例↓↓↓
+ * [Panel]
+ * ReloadProfiles = script-name=ReloadProfiles,update-interval=-1
+ * [Script]
+ * ReloadProfiles = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/ReloadProfiles.js,script-update-interval=0,argument=title=配置重载&icon=leaf.arrow.circlepath&color=#ff9933
+ * 脚本参数说明:
+ * 可选参数"title=xxx" 可以自定义标题
+ * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=leaf.arrow.circlepath",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
+ * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff9933"
+ */
+ 
 $httpAPI("POST", "/v1/profiles/reload", {}, data => {
   let panel = {
     title: "配置重载",

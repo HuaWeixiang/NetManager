@@ -1,3 +1,22 @@
+/*
+ * 由@Nebulosa-Cat编写
+ * 原脚本地址: https://raw.githubusercontent.com/Nebulosa-Cat/Surge/main/Panel/Network-Info/net-info-panel.js
+ * 由@Rabbit-Spec翻译
+ * 脚本地址: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.js
+ * 由@HuaWeixiang修改
+ * 更新日期: 2023.05.20
+ * 版本: 1.0
+ * 
+ * 面板示例↓↓↓
+ * [Panel]
+ * Network-Info = script-name=Network-Info,update-interval=1
+ * [Script]
+ * Network-Info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/Network-Info.js,script-update-interval=0,argument=color=#ff3399
+ * 
+ * 脚本参数说明:
+ * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff3399"
+ */
+ 
 let params = getParams($argument);
 /**
  * 网络请求封装为 Promise
@@ -49,19 +68,23 @@ class httpMethod {
   }
 }
 
-class logger {
-  static id = randomString();
+class loggerUtil {
+  constructor() {
+    this.id = randomString();
+  }
 
-  static log(message) {
+  log(message) {
     message = `[${this.id}] [ LOG ] ${message}`;
     console.log(message);
   }
 
-  static error(message) {
+  error(message) {
     message = `[${this.id}] [ERROR] ${message}`;
     console.log(message);
   }
 }
+
+var logger = new loggerUtil();
 
 function randomString(e = 6) {
   var t = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678',
@@ -144,10 +167,10 @@ function getCellularInfo() {
   if ($network['cellular-data']) {
     const carrierId = $network['cellular-data'].carrier;
     const radio = $network['cellular-data'].radio;
-    if (carrierId && radio) {
+    if ($network.wifi?.ssid == null && radio) {
       cellularInfo = carrierNames[carrierId] ?
-        carrierNames[carrierId] + ' | ' + radioGeneration[radio] + ' - ' + radio :
-        '蜂窝数据 | ' + radioGeneration[radio] + ' - ' + radio;
+        `${carrierNames[carrierId]} | ${radioGeneration[radio]} - ${radio} ` :
+        `蜂窝数据 | ${radioGeneration[radio]} - ${radio}`;
     }
   }
   return cellularInfo;
