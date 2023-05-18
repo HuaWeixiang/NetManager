@@ -11,7 +11,7 @@
  * [Script]
  * NetPingCN = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetPingCN.js,script-update-interval=0
  */
- 
+
 let $ = { Ping: "http://connectivitycheck.platform.hicloud.com/generate_204" };
 function http(req) {
   return new Promise((resolve) => {

@@ -14,7 +14,7 @@
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  */
- 
+
 let url = "http://ip-api.com/json"
 $httpClient.get(url, function(error, response, data){
   let jsonData = JSON.parse(data)

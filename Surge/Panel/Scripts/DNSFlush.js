@@ -15,7 +15,7 @@
  * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=leaf.arrow.circlepath",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
  * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff9933"
  */
- 
+
 !(async () => {
   let panel = {
     title: "Flush DNS",

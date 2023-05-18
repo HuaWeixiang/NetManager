@@ -16,7 +16,7 @@
  * 脚本参数说明:
  * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff3399"
  */
- 
+
 let params = getParams($argument);
 /**
  * 网络请求封装为 Promise

@@ -14,7 +14,7 @@
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  */
- 
+
 const REQUEST_HEADERS = {
   'User-Agent':
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
@@ -46,15 +46,14 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
   await Promise.all([check_youtube_premium(),check_netflix()]).then((result) => {
     console.log(result)
-    let disney_result='Disney+: '
+    let disney_result='D+: '
     if (status==STATUS_COMING) {
       disney_result += '\u21E2' + region.toUpperCase()
     } else if (status==STATUS_AVAILABLE) {
       console.log(region)
       disney_result += '\u2611' + region.toUpperCase()
     } else if (status==STATUS_NOT_AVAILABLE) {
-      //disney_result += '\u2612'
-	  disney_result += '\u21E2'
+      disney_result += '\u2612'
     } else if (status==STATUS_TIMEOUT) {
       disney_result += 'timeout'
     } else {
@@ -103,7 +102,7 @@ async function check_youtube_premium() {
     })
   }
   
-  let youtube_check_result = 'Youtube: '
+  let youtube_check_result = 'YT: '
   
   await inner_check().then((code) => {
     if (code === 'Not Available') {
@@ -156,7 +155,7 @@ async function check_netflix() {
     })
   }
 
-  let netflix_check_result = 'Netflix: '
+  let netflix_check_result = 'NF: '
   
   await inner_check(80062035).then((code) => {
     if (code === 'Not Found') {
