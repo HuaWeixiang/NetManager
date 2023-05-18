@@ -39,7 +39,7 @@ function http(req) {
   return new Promise((r) => {
     let time = Date.now();
     $httpClient.post($[req], (err, resp, data) => {
-      r(req +':' +(Date.now() - time)+'ms');
+      r(req +': ' +(Date.now() - time)+'ms');
     });
   });
 }

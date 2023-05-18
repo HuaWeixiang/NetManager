@@ -1,15 +1,15 @@
 /*
  * 由@congcong0806编写
- * 原脚本地址: https://github.com/congcong0806/surge-list/blob/master/Script/ipcheck.js
+ * 原脚本地址: https://raw.githubusercontent.com/congcong0806/surge-list/master/Script/ipcheck.js
  * 由@HuaWeixiang修改
  * 更新日期: 2023.05.20
  * 版本: 1.0
  * 
  * 面板示例↓↓↓
  * [Panel]
- * IPCheck = script-name=IPCheck,update-interval=-1
+ * NetIP = script-name=NetIP,update-interval=-1
  * [Script]
- * IPCheck = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/IPCheck.js,script-update-interval=0,argument=title=节点信息&icon=paperplane.fill&color=#ff3399
+ * NetIP = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetIP.js,script-update-interval=0,argument=title=节点信息&icon=paperplane.fill&color=#ff3399
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=paperplane.fill",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
@@ -20,24 +20,25 @@ let url = "http://ip-api.com/json"
 
 $httpClient.get(url, function(error, response, data){
   let jsonData = JSON.parse(data);
-  let country = jsonData.country;
-  let emoji = getFlagEmoji(jsonData.countryCode);
-  let city = jsonData.city;
-  let isp = jsonData.isp;
   let ip = jsonData.query;
-  let panel = {
+  let isp = jsonData.isp;
+  let emoji = getFlagEmoji(jsonData.countryCode);
+  let country = jsonData.country;
+  let city = jsonData.city;
+  
+  let panel_result = {
     title: "节点信息",
-    content: `IP ➟ ${ip}\nISP ➟ ${isp}\n位置 ➟ ${emoji}${country}-${city}`,
+    content: `IP: ${ip}\nISP: ${isp}\n位置: ${emoji}${country}-${city}`,
     icon: "paperplane.fill",
     "icon-color": "#ff3399",
   }
   if (typeof $argument != "undefined") {
     let arg = Object.fromEntries($argument.split("&").map((item) => item.split("=")));
-    if (arg.title) panel.title = arg.title;
-    if (arg.icon) panel.icon = arg.icon;
-    if (arg.color) panel["icon-color"] = arg.color;
+    if (arg.title) panel_result.title = arg.title;
+    if (arg.icon) panel_result.icon = arg.icon;
+    if (arg.color) panel_result["icon-color"] = arg.color;
   }
-  $done(panel);
+  $done(panel_result);
 });
 
 function getFlagEmoji(countryCode) {

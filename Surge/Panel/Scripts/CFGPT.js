@@ -33,9 +33,9 @@ $httpClient.get(url, function(error, response, data){
   //loc
   let l = tf.indexOf(loc)
   if (l != -1) {
-    gpt = "\u2714"
+    gpt = "\u2713"
   } else {
-    gpt = "\u2716"
+    gpt = "\u2715"
   }
   //warp
   let w = tff.indexOf(warp)
@@ -46,7 +46,7 @@ $httpClient.get(url, function(error, response, data){
   }
   let panel_result = {
     title: 'CFGPT',
-    content: `GPT: ${gpt}   Loc: ${loc}   WARP: ${warp} ${warps}`,
+    content: `GPT: ${gpt}  Loc: ${loc}  WARP: ${warp} ${warps}`,
   }
   if (typeof $argument != 'undefined') {
     let arg = Object.fromEntries($argument.split('&').map((item) => item.split('=')));

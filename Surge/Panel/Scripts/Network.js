@@ -9,9 +9,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * NetworkInfo = script-name=NetworkInfo,update-interval=1
+ * Network = script-name=Network,update-interval=1
  * [Script]
- * NetworkInfo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetworkInfo.js,script-update-interval=0,argument=color=#ff3399
+ * Network = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/Network.js,script-update-interval=0,argument=color=#ff3399
  * 
  * 脚本参数说明:
  * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff3399"
@@ -215,7 +215,7 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
         getIP() +
         `节点IP: ${info.query}\n` +
         `节点ISP: ${info.isp}\n` +
-        `节点位置: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
+        `节点位置: ${getFlagEmoji(info.countryCode)} ${info.country}-${info.city}`,
       icon: getSSID() ? 'wifi' : 'simcard',
       'icon-color': params.color ? params.color : getSSID() ? '#5A9AF9' : '#8AB8DD',
     });

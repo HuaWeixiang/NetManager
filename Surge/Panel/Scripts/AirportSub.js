@@ -7,9 +7,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * SubInfo = script-name=SubInfo,update-interval=3600
+ * AirportSub = script-name=AirportSub,update-interval=3600
  * [Script]
- * SubInfo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/SubInfo.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=MyAirplane&icon=airplane&color=#9933ff
+ * AirportSub = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/AirportSub.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=MyAirplane&icon=airplane&color=#9933ff
  * 
  * 脚本参数说明:
  * 必须参数"url=xxx" 先将带有流量信息的节点订阅链接encode,用encode后的链接替换"url="后面的[机场节点链接]

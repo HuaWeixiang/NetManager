@@ -69,7 +69,7 @@
 
   let panel = {
     title: "流量统计 | "+netType,
-    content: `流量 ➟ ${upload} | ${download}\n速度 ➟ ${outCurrentSpeed} | ${inCurrentSpeed}\n峰值 ➟ ${outMaxSpeed} | ${inMaxSpeed}`,
+    content: `流量: ${upload} | ${download}\n速度: ${outCurrentSpeed} | ${inCurrentSpeed}\n峰值: ${outMaxSpeed} | ${inMaxSpeed}`,
     icon: "speedometer",
     "icon-color": "#ff6666",
   };

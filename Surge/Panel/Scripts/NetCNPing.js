@@ -1,18 +1,18 @@
 /*
  * 由@Keywos编写
- * 原脚本地址: https://raw.githubusercontent.com/Keywos/rule/main/JS/USPing.js
+ * 原脚本地址: https://raw.githubusercontent.com/Keywos/rule/main/JS/CNPing.js
  * 由@HuaWeixiang修改
  * 更新日期: 2023.05.20
  * 版本: 1.0
  * 
  * 面板示例↓↓↓
  * [Panel]
- * USPing = script-name=USPing,update-interval=-1
+ * NetCNPing = script-name=NetCNPing,update-interval=-1
  * [Script]
- * USPing = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/USPing.js,script-update-interval=0
+ * NetCNPing = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetCNPing.js,script-update-interval=0
  */
  
-let $ = { Ping: "http://cp.cloudflare.com/generate_204" };
+let $ = { Ping: "http://connectivitycheck.platform.hicloud.com/generate_204" };
 function http(req) {
   return new Promise((resolve) => {
     let startTime = Date.now();
@@ -25,7 +25,7 @@ function http(req) {
 
 function saveGif(gifArr) {
   const timekey = new Date().getTime();
-  const sdgif = $persistentStore.read("KEY-US-Ping");
+  const sdgif = $persistentStore.read("KEY-CN-Ping");
   const sdd = sdgif ? JSON.parse(sdgif) : {};
   sdd[timekey] = gifArr.join("");
   const sdkey = Object.keys(sdd);
@@ -33,16 +33,16 @@ function saveGif(gifArr) {
     const oldkey = sdkey.sort()[0];
     delete sdd[oldkey];
   }
-  const sddata = $persistentStore.write(JSON.stringify(sdd), "KEY-US-Ping");
-  const readd = $persistentStore.read("KEY-US-Ping");
+  const sddata = $persistentStore.write(JSON.stringify(sdd), "KEY-CN-Ping");
+  const readd = $persistentStore.read("KEY-CN-Ping");
   const readData = readd ? JSON.parse(readd) : {};
   const outgit = Object.values(sdd).join("");
   return outgit;
 }
 
 function PingToGif(pingTimes) {
-  const minValue = 60;
-  const maxValue = 300;
+  const minValue = 10;
+  const maxValue = 120;
   const gif = pingTimes
     .map((x) => {
       let ptogif = (x - minValue) / (maxValue - minValue);
@@ -72,7 +72,7 @@ function PingToGif(pingTimes) {
         pingTimes.push(time);
       }
     let avgTime = Math.round(pingTimes.reduce((a, b) => a + b, 0) / pingTimes.length);
-    let fhzText = `CF: (${avgTime}ms).padEnd(7, " ")\t➟       ${key}: ${pingTimes}ms`;
+    let fhzText = `CN: ${avgTime}ms        ➟        ${key}: ${pingTimes}ms`;
     const gif = PingToGif(pingTimes)
     gifArr.push(gif);
     fhz[key] = fhzText;
