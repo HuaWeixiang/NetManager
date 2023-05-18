@@ -30,7 +30,7 @@
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用: ${toPercent(used, total)} \t| 剩余: ${toMultiply(total, used)}`];
+  let content = [`已用: ${toPercent(used, total)} \t|  剩余: ${toMultiply(total, used)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
@@ -167,5 +167,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return "到期：" + year + "." + month + "." + day + " ";
+  return "到期: " + year + "." + month + "." + day + " ";
 }
