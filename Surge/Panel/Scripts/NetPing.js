@@ -16,11 +16,10 @@
  */
  
 let $ = {
-  H:'https://connectivitycheck.platform.hicloud.com/generate_204',
-  B:'https://www.baidu.com',
-  G:'https://www.google.com/generate_204',
-  Y:'https://www.youtube.com'}  
-//  GH:'https://www.github.com'}
+  CC:'https://connectivitycheck.platform.hicloud.com/generate_204',
+  GG:'https://www.google.com/generate_204',
+  GH:'https://www.github.com',
+  CF:'http://cp.cloudflare.com/generate_204}
 !(async () => {
   let panel_result = {
     title: 'NetPing',
@@ -30,7 +29,7 @@ let $ = {
     let arg = Object.fromEntries($argument.split('&').map((item) => item.split('=')));
     if (arg.title) panel_result.title = arg.title;
   }
-  await Promise.all([http('H'),http('B'),http('G'),http('Y')]).then((x)=>{
+  await Promise.all([http('CC'),http('GG'),http('GH'),http('CF')]).then((x)=>{
     panel_result['content'] = x.join('  ');
     $done(panel_result);
   })

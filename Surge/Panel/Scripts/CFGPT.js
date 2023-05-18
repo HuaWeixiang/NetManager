@@ -46,7 +46,7 @@ $httpClient.get(url, function(error, response, data){
   }
   let panel_result = {
     title: 'CFGPT',
-    content: `GPT: ${gpt}  Loc: ${loc}  WARP: ${warp} ${warps}`,
+    content: `GPT: ${gpt}   Loc: ${loc}   WARP: ${warp} ${warps}`,
   }
   if (typeof $argument != 'undefined') {
     let arg = Object.fromEntries($argument.split('&').map((item) => item.split('=')));

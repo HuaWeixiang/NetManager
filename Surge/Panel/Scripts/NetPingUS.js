@@ -7,12 +7,12 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * NetUSPing = script-name=NetUSPing,update-interval=-1
+ * NetPingUS = script-name=NetPingUS,update-interval=-1
  * [Script]
- * NetUSPing = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetUSPing.js,script-update-interval=0
+ * NetPingUS = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetPingUS.js,script-update-interval=0
  */
  
-let $ = { Ping: "http://cp.cloudflare.com/generate_204" };
+let $ = { Ping: "http://connectivitycheck.platform.hicloud.com/generate_204",Ping: "http://cp.cloudflare.com/generate_204" };
 function http(req) {
   return new Promise((resolve) => {
     let startTime = Date.now();

@@ -7,9 +7,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * NetCNPing = script-name=NetCNPing,update-interval=-1
+ * NetPingCN = script-name=NetPingCN,update-interval=-1
  * [Script]
- * NetCNPing = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetCNPing.js,script-update-interval=0
+ * NetPingCN = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetPingCN.js,script-update-interval=0
  */
  
 let $ = { Ping: "http://connectivitycheck.platform.hicloud.com/generate_204" };

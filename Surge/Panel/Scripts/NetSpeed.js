@@ -13,7 +13,7 @@
  * NetSpeed = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetSpeed.js,script-update-interval=0,argument=mb=1&title=NetSpeed
  * 
  * 脚本参数说明:
- * 可选参数"mb=xxx" 每次测试消耗的流量,经测试最大可设置4MB参数"mb=4",默认4MB
+ * 可选参数"mb=xxx" 每次测试消耗的流量,经测试最大可设置4MB参数"mb=4",默认1MB
  * 可选参数"title=xxx" 可以自定义标题
  */
 
@@ -31,7 +31,7 @@ let content = ''
   if($.isTile()) {
     await notify('网络速率', '面板', '开始查询')
   }
-  const mb = $.lodash_get(arg, 'mb') || 4
+  const mb = $.lodash_get(arg, 'mb') || 1
   const bytes = mb * 1024 * 1024
   let start = Date.now()
   const res = await $.http.get({
@@ -42,7 +42,7 @@ let content = ''
   const duration = (end - time || start) / 1000
   const speed = mb / duration
   title = `NetSpeed`
-  content = `${round(Math.abs(speed * 8))}Mbps  ${round(Math.abs(speed, 2), 1)}MB/s  Time cost: ${round(Math.abs(duration, 2),2)}s`
+  content = `${round(Math.abs(speed * 8))}Mbps   ${round(Math.abs(speed, 2), 1)}MB/s   Time cost: ${round(Math.abs(duration, 2),2)}s`
   if ($.isTile()) {
     await notify('网络速率', '面板', '查询完成')
   } else if(!$.isPanel()) {

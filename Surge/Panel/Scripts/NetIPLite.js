@@ -26,11 +26,11 @@ $httpClient.get(url, function(error, response, data){
   //去重
   let locationsArray = [country, city, citys];
   let uniqueLocationsArray = [...new Set(locationsArray)];
-  let uniqueLocations = uniqueLocationsArray.join(" ");
+  let uniqueLocations = uniqueLocationsArray.join("  ");
 
   let panel_result = {
     title: 'NetIP',
-    content: `${ip}  ${isp}\n${uniqueLocations}`,
+    content: `${ip}   ${isp}\n${uniqueLocations}`,
   }
   if (typeof $argument != 'undefined') {
     let arg = Object.fromEntries($argument.split('&').map((item) => item.split('=')));
