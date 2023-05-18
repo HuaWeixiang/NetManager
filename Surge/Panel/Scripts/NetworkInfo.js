@@ -9,9 +9,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * Network-Info = script-name=Network-Info,update-interval=1
+ * NetworkInfo = script-name=NetworkInfo,update-interval=1
  * [Script]
- * Network-Info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/Network-Info.js,script-update-interval=0,argument=color=#ff3399
+ * NetworkInfo = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/NetworkInfo.js,script-update-interval=0,argument=color=#ff3399
  * 
  * 脚本参数说明:
  * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff3399"
@@ -186,12 +186,12 @@ function getIP() {
   if (!v4 && !v6) {
     info = ['网路可能中断', '请手动刷新以重新获取 IP'];
   } else {
-    if (v4?.primaryAddress) info.push(`IPv4: ${v4?.primaryAddress}`);
-    //if (v6?.primaryAddress) info.push(`IPv6: ${v6?.primaryAddress}`);
-    if (v6?.primaryAddress) info.push(`IPv6: 已分配`);
-    if (v4?.primaryRouter && getSSID()) info.push(`RouterIPv4: ${v4?.primaryRouter}`);
-    //if (v6?.primaryRouter && getSSID()) info.push(`RouterIPv6: ${v6?.primaryRouter}`);
-    if (v6?.primaryRouter && getSSID()) info.push(`RouterIPv6: 已分配`);
+    if (v4?.primaryAddress) info.push(`设备IP: ${v4?.primaryAddress}`);
+    //if (v6?.primaryAddress) info.push(`设备IPv6: ${v6?.primaryAddress}`);
+    if (v6?.primaryAddress) info.push(`设备IPv6: 已分配`);
+    if (v4?.primaryRouter && getSSID()) info.push(`路由器IP: ${v4?.primaryRouter}`);
+    //if (v6?.primaryRouter && getSSID()) info.push(`路由器IPv6: ${v6?.primaryRouter}`);
+    if (v6?.primaryRouter && getSSID()) info.push(`路由器IPv6: 已分配`);
   }
   info = info.join('\n');
   return info + '\n';
@@ -213,9 +213,9 @@ function getNetworkInfo(retryTimes = 5, retryInterval = 1000) {
       title: getSSID() ?? getCellularInfo(),
       content:
         getIP() +
-        `IP信息: ${info.query}\n` +
-        `运营商: ${info.isp}\n` +
-        `所在地: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
+        `节点IP: ${info.query}\n` +
+        `节点ISP: ${info.isp}\n` +
+        `节点位置: ${getFlagEmoji(info.countryCode)} | ${info.country} - ${info.city}`,
       icon: getSSID() ? 'wifi' : 'simcard',
       'icon-color': params.color ? params.color : getSSID() ? '#5A9AF9' : '#8AB8DD',
     });

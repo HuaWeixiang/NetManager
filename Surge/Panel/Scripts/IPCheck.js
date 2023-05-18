@@ -7,9 +7,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * IP-Check = script-name=IP-Check,update-interval=-1
+ * IPCheck = script-name=IPCheck,update-interval=-1
  * [Script]
- * IP-Check = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/IP-Check.js,script-update-interval=0,argument=title=节点信息&icon=paperplane.fill&color=#ff3399
+ * IPCheck = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/IPCheck.js,script-update-interval=0,argument=title=节点信息&icon=paperplane.fill&color=#ff3399
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=paperplane.fill",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336

@@ -1,6 +1,6 @@
 /*
  * 由@fishingworld编写
- * 原脚本地址: https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_flushdns.js
+ * 原脚本地址: https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js
  * 由@HuaWeixiang修改
  * 更新日期: 2023.05.20
  * 版本: 1.0
@@ -9,7 +9,7 @@
  * [Panel]
  * SurgePro = script-name=SurgePro,update-interval=1
  * [Script]
- * SurgePro = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/SurgePro-FlushDNS.js,script-update-interval=0,argument=title=Surge Pro®&icon=crown.fill&color=#ffd700
+ * SurgePro = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/SurgePro-ProfilesReload.js,script-update-interval=0,argument=title=Surge Pro®&icon=crown.fill&color=#ffd700
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=crown.fill",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
@@ -27,8 +27,8 @@
   let rewrite_status = (await httpAPI("/v1/features/rewrite","GET"));
   let scripting_status = (await httpAPI("/v1/features/scripting","GET"));
   let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabled;
-  //点击按钮，刷新dns
-  if ($trigger == "button") await httpAPI("/v1/dns/flush");
+  //点击按钮，重载配置
+  if ($trigger == "button") await httpAPI("/v1/profiles/reload");
   //panel设置
   let panel = {
     title:"Surge Pro®",

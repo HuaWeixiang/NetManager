@@ -7,12 +7,14 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * Stream-All-Lite = script-name=Stream-All-Lite,update-interval=-1
+ * StreamsCheck = script-name=StreamsCheck,update-interval=-1
  * [Script]
- * Stream-All-Lite = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/Stream-All-Lite.js,script-update-interval=0,argument=title=StreamCheck
+ * StreamsCheck = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/StreamsCheck.js,script-update-interval=0,argument=title=流媒体解锁检测&icon=play.tv.fill&color=#ff00cc
  * 
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
+ * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=play.tv.fill",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
+ * 可选参数"color=xxx" 可以自定义图标颜色,内容为颜色的HEX编码,如"&color=#ff00cc"
  */
  
 const REQUEST_HEADERS = {
@@ -36,28 +38,32 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 (async () => {
   let panel_result = {
-    title: 'StreamCheck',
+    title: '流媒体解锁检测',
     content: '',
+    icon: 'play.tv.fill',
+    'icon-color': '#ff00cc',
   }
   if (typeof $argument != 'undefined') {
     let arg = Object.fromEntries($argument.split('&').map((item) => item.split('=')));
     if (arg.title) panel_result.title = arg.title;
+    if (arg.icon) panel_result.icon = arg.icon;
+    if (arg.color) panel_result['icon-color'] = arg.color;
   }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
   await Promise.all([check_youtube_premium(),check_netflix()]).then((result) => {
     console.log(result)
     let disney_result='Disney+: '
     if (status==STATUS_COMING) {
-      disney_result += '\u21E2' + region.toUpperCase()
+      disney_result += '即将登陆 ➟ ' + region.toUpperCase()
     } else if (status==STATUS_AVAILABLE) {
       console.log(region)
-      disney_result += '\u2611' + region.toUpperCase()
+      disney_result += '已解锁 ➟ ' + region.toUpperCase()
     } else if (status==STATUS_NOT_AVAILABLE) {
-      disney_result += '\u2612'
+      disney_result += '不支持解锁 ✖'
     } else if (status==STATUS_TIMEOUT) {
-      disney_result += 'timeout'
+      disney_result += '检测超时 🚦'
     } else {
-      disney_result += 'error'
+      disney_result += '检测失败 🏴‍☠️'
     }
     result.push(disney_result)
     console.log(result)
@@ -102,16 +108,16 @@ async function check_youtube_premium() {
     })
   }
   
-  let youtube_check_result = 'Youtube: '
+  let youtube_check_result = 'YouTube: '
   
   await inner_check().then((code) => {
     if (code === 'Not Available') {
-      youtube_check_result += '\u2612  '
+      youtube_check_result += '不支持解锁 ✖'
     } else {
-      youtube_check_result += '\u2611' + code.toUpperCase() + '  '
+      youtube_check_result += '已解锁 ➟ ' + code.toUpperCase()
     }
   }).catch((error) => {
-    youtube_check_result += 'error  '
+    youtube_check_result += '检测失败 🏴‍☠️'
   })
   return youtube_check_result
 }
@@ -161,23 +167,23 @@ async function check_netflix() {
     if (code === 'Not Found') {
       return inner_check(80018499)
     }
-    netflix_check_result += '\u2611' + code.toUpperCase() + '  '
+    netflix_check_result += '已完整解锁 ➟ ' + code.toUpperCase()
     return Promise.reject('BreakSignal')
   }).then((code) => {
     if (code === 'Not Found') {
       return Promise.reject('Not Available')
     }
-    netflix_check_result += '\u26A0' + code.toUpperCase() + '  '
+    netflix_check_result += '仅解锁自制剧 ➟ ' + code.toUpperCase()
     return Promise.reject('BreakSignal')
   }).catch((error) => {
     if (error === 'BreakSignal') {
       return
     }
     if (error === 'Not Available') {
-      netflix_check_result += '\u2612  '
+      netflix_check_result += '不支持解锁 ✖'
       return
     }
-    netflix_check_result += 'error  '
+    netflix_check_result += '检测失败 🏴‍☠️'
   })
   return netflix_check_result
 }

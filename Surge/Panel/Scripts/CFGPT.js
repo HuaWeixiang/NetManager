@@ -35,7 +35,7 @@ $httpClient.get(url, function(error, response, data){
   if (l != -1) {
     gpt = "\u2714"
   } else {
-    gpt = "\u2718"
+    gpt = "\u2716"
   }
   //warp
   let w = tff.indexOf(warp)

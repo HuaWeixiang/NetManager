@@ -7,9 +7,9 @@
  * 
  * 面板示例↓↓↓
  * [Panel]
- * FlushDNS = script-name=FlushDNS,update-interval=-1
+ * DNSFlush = script-name=DNSFlush,update-interval=-1
  * [Script]
- * FlushDNS = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/FlushDNS.js,script-update-interval=0,argument=title=DNS Flush&icon=leaf.arrow.circlepath&color=#ff9933
+ * DNSFlush = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Panel/Scripts/DNSFlush.js,script-update-interval=0,argument=title=DNS Flush&icon=leaf.arrow.circlepath&color=#ff9933
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  * 可选参数"icon=xxx" 可以自定义图标,内容为任意有效的 SF Symbol Name,如"&icon=leaf.arrow.circlepath",详细可以下载app https://apps.apple.com/cn/app/sf-symbols-browser/id1491161336
