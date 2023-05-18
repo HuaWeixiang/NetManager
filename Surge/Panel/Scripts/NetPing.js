@@ -14,12 +14,13 @@
  * 脚本参数说明:
  * 可选参数"title=xxx" 可以自定义标题
  */
- 
+
 let $ = {
   CC:'https://connectivitycheck.platform.hicloud.com/generate_204',
   GG:'https://www.google.com/generate_204',
   GH:'https://www.github.com',
-  CF:'http://cp.cloudflare.com/generate_204}
+  CF:'http://cp.cloudflare.com/generate_204
+}
 !(async () => {
   let panel_result = {
     title: 'NetPing',

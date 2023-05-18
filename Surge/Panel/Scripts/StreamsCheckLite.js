@@ -54,7 +54,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       disney_result += '\u2611' + region.toUpperCase()
     } else if (status==STATUS_NOT_AVAILABLE) {
       //disney_result += '\u2612'
-	  disney_result += '\u21E2' + region.toUpperCase()
+	  disney_result += '\u21E2'
     } else if (status==STATUS_TIMEOUT) {
       disney_result += 'timeout'
     } else {
