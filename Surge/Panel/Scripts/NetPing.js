@@ -31,7 +31,7 @@ let $ = {
     if (arg.title) panel_result.title = arg.title;
   }
   await Promise.all([http('CC'),http('GG'),http('GH'),http('CF')]).then((x)=>{
-    panel_result['content'] = x.join('  ');
+    panel_result['content'] = x.join(' ');
     $done(panel_result);
   })
 })();
