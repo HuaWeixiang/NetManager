@@ -163,9 +163,9 @@ async function check_netflix() {
 
   let netflix_check_result = 'Netflix: '
   
-  await inner_check(80062035).then((code) => {
+  await inner_check(81280792).then((code) => {//非自制剧
     if (code === 'Not Found') {
-      return inner_check(80018499)
+      return inner_check(80018499)//自制剧
     }
     netflix_check_result += '已完整解锁 ➟ ' + code.toUpperCase()
     return Promise.reject('BreakSignal')
