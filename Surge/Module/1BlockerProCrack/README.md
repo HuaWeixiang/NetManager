@@ -30,4 +30,4 @@
 ### 温馨提示
 >脚本为一次性解锁，后续无需再开脚本<br>
 >解锁成功后支持版本更新<br>
->支持其他平台，需自行配置一下写法，推荐使用[QX重写转化Surge模块](https://t.me/yqc_123/1491)捷径或[QX_to_Surge](https://raw.githubusercontent.com/chengkongyiban/Surge/main/modules/QX_to_Surge.sgmodule)模块
+>支持其他平台，需自行配置一下写法，推荐使用[QX重写转化Surge模块](https://t.me/yqc_123/1491)捷径或[QX_to_Surge](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/QX_to_Surge)模块
