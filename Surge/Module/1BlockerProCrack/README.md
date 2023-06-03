@@ -28,6 +28,6 @@
 >**脚本代码查看 :** Surge首页 -> 修改 -> 脚本的编辑器 -> 载入 -> 找到并点击相关脚本 -> 查看代码是否与网页版本相同
 
 ### 温馨提示
->脚本为一次性解锁，后续无需再开脚本
->解锁成功后支持版本更新
->支持其他平台，需自行配置一下写法或利用 QX重写转化Surge模块 (https://t.me/yqc_123/1491) 捷径，或 QX_to_Surge (https://raw.githubusercontent.com/chengkongyiban/Surge/main/modules/QX_to_Surge.sgmodule) 模块
+>脚本为一次性解锁，后续无需再开脚本<br>
+>解锁成功后支持版本更新<br>
+>支持其他平台，需自行配置一下写法或利用[QX重写转化Surge模块](https://t.me/yqc_123/1491)捷径，或[QX_to_Surge](https://raw.githubusercontent.com/chengkongyiban/Surge/main/modules/QX_to_Surge.sgmodule)模块

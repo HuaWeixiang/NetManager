@@ -14,7 +14,7 @@
 4. 可以在后台定时将Sub-Store的订阅同步至gist
 
 ### 同步模块需要配合@Peng-YM大佬的Sub-Store本体模块一起使用
->**稳定版 :** https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Surge.sgmodule<br>
+>**稳定版 :** https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Surge.sgmodule
 
 ## 使用 Sub-Store
 1. 安装Sub-Store模块
@@ -31,7 +31,7 @@
 ### 2. 安装链接
 >**凌晨1点开始每6个小时同步 :** https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Module/Sub-Store-Sync/6hours.sgmodule<br>
 >**早上5点开始每12个小时同步 :** https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Module/Sub-Store-Sync/12hours.sgmodule<br>
->**凌晨1点开始每24个小时同步 :** https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Module/Sub-Store-Sync/24hours.sgmodule<br>
+>**凌晨1点开始每24个小时同步 :** https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Module/Sub-Store-Sync/24hours.sgmodule
 
 **通常情况下建议使用「凌晨1点开始每24个小时同步」这个版本**
 
