@@ -16,10 +16,10 @@
  */
 
 let $ = {
-  CC:'https://connectivitycheck.platform.hicloud.com/generate_204',
+  CN:'https://connectivitycheck.platform.hicloud.com/generate_204',
   GG:'https://www.google.com/generate_204',
-  GH:'https://www.github.com',
-  CF:'http://cp.cloudflare.com/generate_204'
+  CF:'http://cp.cloudflare.com/generate_204',
+  GH:'https://www.github.com'
 }
 !(async () => {
   let panel_result = {

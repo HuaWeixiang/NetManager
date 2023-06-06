@@ -18,3 +18,8 @@ https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Conf/black
 ```
 https://raw.githubusercontent.com/HuaWeixiang/NetManager/master/Surge/Conf/blackmatrix7-recommend.conf
 ```
+
+**参考GetSomeCats的A_mini.conf、Surge.conf和SurgePro.conf规则配置**
+https://github.com/getsomecat/GetSomeCats/blob/Surge/A_mini.conf
+https://github.com/getsomecat/GetSomeCats/blob/Surge/Surge.conf
+https://github.com/getsomecat/GetSomeCats/blob/Surge/SurgePro.conf
