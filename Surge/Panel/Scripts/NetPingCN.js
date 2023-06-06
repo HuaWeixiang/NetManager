@@ -77,7 +77,7 @@ function ptoG(t) {
   const e = saK(t);
   const n = ptoG(e);
   let o = Math.round(e.reduce(((t, e) => t + e), 0) / e.length);
-  let s = `CN: ${o.toString().padEnd(5," ")} ms\t?     Ping: ${t}ms`;
+  let s = `CN: ${o.toString().padEnd(5," ")} ms\t➟     Ping: ${t}ms`;
   $done({
     title: s,
     content: n

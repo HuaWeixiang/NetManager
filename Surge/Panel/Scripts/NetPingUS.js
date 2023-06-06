@@ -80,7 +80,7 @@ function ptoG(t) {
   const e = saK(t);
   const n = ptoG(e);
   let s = Math.round(e.reduce(((t, e) => t + e), 0) / e.length);
-  let o = `CF: ${s.toString().padEnd(5," ")} ms\t?     Ping: ${t}ms`;
+  let o = `CF: ${s.toString().padEnd(5," ")} ms\t➟     Ping: ${t}ms`;
   $done({
     title: o,
     content: n
