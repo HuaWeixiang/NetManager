@@ -1,5 +1,8 @@
 <h1 align="center">Surge自用配置、脚本、模块和面板等</h1>
 
+### 资源
+[官方网站](https://nssurge.com/) / [手册](http://manual.nssurge.com/) / [常见问题](https://nssurge.zendesk.com/) / [社区](https://community.nssurge.com/)
+
 ### 配置链接
 > **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Conf<br>
 
