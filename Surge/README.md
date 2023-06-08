@@ -1,6 +1,6 @@
 <h1 align="center">
   <sub>
-    <img src="https://s2.loli.net/2023/06/08/2QwxJm6dqgakDME.png" height=55px width=55px>
+    <img src="https://s2.loli.net/2023/06/08/fwTk5ugU4QDH1XB.png" height=35px width=35px>
   </sub>
   Surge
 </h1>
