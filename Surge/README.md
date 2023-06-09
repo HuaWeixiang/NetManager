@@ -1,12 +1,13 @@
 <h1 align="center">
-  <sub>
-    <img src="https://s2.loli.net/2023/06/08/fwTk5ugU4QDH1XB.png" height=40px width=40px>
-  </sub>
-  Surge
+  <a href="https://nssurge.com/support" target="_blank"><img src="https://s2.loli.net/2023/06/08/fwTk5ugU4QDH1XB.png" height=23px width=23px></a> Surge
 </h1>
 
-### 资源
-[官方网站](https://nssurge.com/) / [手册](http://manual.nssurge.com/) / [常见问题](https://nssurge.zendesk.com/) / [社区](https://community.nssurge.com/)
+<p align="center">
+  <sup>
+    Surge is an advanced network toolbox<br>
+    <a href="https://kb.nssurge.com/surge-knowledge-base/v/zh"><i>Knowledge Base</i></a> / <a href="http://manual.nssurge.com"><i>Online Manual</i></a> / <a href="https://community.nssurge.com"><i>Community</i></a> / <a href="https://manual.nssurge.com/book/understanding-surge/cn/"><i>Understanding Surge</i></a>
+  </sup>
+</p>
 
 ### 配置链接
 > **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Conf<br>
