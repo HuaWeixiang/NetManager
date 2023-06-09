@@ -1,5 +1,8 @@
 <h1 align="center">
-  <a href="https://nssurge.com/support" target="_blank"><img src="https://s2.loli.net/2023/06/08/fwTk5ugU4QDH1XB.png" height=23px width=23px></a> Surge
+  <sub>
+    <a href="https://nssurge.com/support"><img src="https://s2.loli.net/2023/06/08/fwTk5ugU4QDH1XB.png" height=40px width=40px></a>
+  </sub>
+  Surge
 </h1>
 
 <p align="center">
