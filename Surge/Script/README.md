@@ -26,10 +26,10 @@
 >**脚本页面添加 :** Surge首页 -> 修改 -> 脚本的脚本 -> 新增 -> 按照上方脚本代码填写 -> 完成......
 
 **BoxJs订阅安装**
->安装[BoxJs](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/BoxJs/README.md) -> 浏览器访问[boxjs.com](http://boxjs.com "BoxJs") -> 订阅 -> 添加 -> 复制粘贴上方BoxJs订阅链接 -> 保存 -> 应用 -> 找到列表里的应用点击收藏 -> 点开应用 -> 设置参数 -> 保存
+>安装[BoxJs](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/BoxJs) -> 浏览器访问[boxjs.com](http://boxjs.com "BoxJs") -> 订阅 -> 添加 -> 复制粘贴上方BoxJs订阅链接 -> 保存 -> 应用 -> 找到列表里的应用点击收藏 -> 点开应用 -> 设置参数 -> 保存
 
 ### 3. 更新方式
-**脚本可自动更新和手动更新**
+**脚本可自动更新或手动更新**
 >**自动更新 :** script-update-interval可自定义更新间隔<br>
 >**手动更新 :** Surge首页 -> 点击最上方打开Profile页面 -> 外部资源 -> 全部更新|(找到并左滑相关脚本 -> 更新) -> 完成......
 
