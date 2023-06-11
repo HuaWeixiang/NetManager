@@ -12,29 +12,23 @@
   </sup>
 </p>
 
-### 配置链接
-> **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Conf<br>
-
-### 脚本链接
-> **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Script<br>
-
-### 模块链接
-> **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module<br>
-
-### 面板链接
-> **稳定版 :** https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Panel<br>
-
-### 「进阶」神机规则脚本
-> **公开版 :** https://github.com/DivineEngine/Profiles/tree/master<br>
-
-### 「进阶」分流规则、重写规则及脚本
-> **公开版 :** https://github.com/blackmatrix7/ios_rule_script<br>
-
-### 「进阶」搜集、整理、维护 Surge / Quantumult (X) / Shadowrocket / Surfboard / clash (Premium) 实用规则
-> **公开版 :** https://github.com/Hackl0us/SS-Rule-Snippet<br>
-
-### 「进阶」解锁完整的Apple功能和集成服务
-> **公开版 :** https://github.com/VirgilClyne/iRingo<br>
-
-### 「进阶」Boxjs可以解锁脚本的更多可玩性
-> **公开版 :** https://docs.boxjs.app<br>
+---
+- 「导航」
+  - [Conf](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Conf)
+  - [Script](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Script)
+  - [Module](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module)
+    - [BoxJs](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/BoxJs)
+    - [Sub-Store-Sync](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/Sub-Store-Sync)
+    - [QX_to_Surge](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/QX_to_Surge)
+    - [AdGuardProCrack](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/AdGuardProCrack)
+    - [1BlockerProCrack](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/1BlockerProCrack)
+    - [SparkMailProCrack](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/SparkMailProCrack)
+    - [PicsewProCrack](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Module/PicsewProCrack)
+  - [Panel](https://github.com/HuaWeixiang/NetManager/tree/master/Surge/Panel)
+- 「进阶」
+  - [DivineEngine的Profiles 规则脚本](https://github.com/DivineEngine/Profiles/tree/master)
+  - [blackmatrix7的ios_rule_script 分流规则、重写规则及脚本]( https://github.com/blackmatrix7/ios_rule_script)
+  - [Hackl0us的SS-Rule-Snippet 搜集、整理、维护 Surge / Quantumult (X) / Shadowrocket / Surfboard / clash (Premium) 实用规则](https://github.com/Hackl0us/SS-Rule-Snippet)
+  - [VirgilClyne的iRingo 解锁完整的 Apple功能和集成服务](https://github.com/VirgilClyne/iRingo)
+  - [chavyleung的scripts BoxJs](https://github.com/chavyleung/scripts)[🧰](https://docs.boxjs.app)
+---

@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://docs.boxjs.app/">🧰</a>
+  <a href="https://docs.boxjs.app">🧰</a>
   BoxJs
 </h1>
 
