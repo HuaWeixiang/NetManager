@@ -1,6 +1,6 @@
 <h1 align="center">
   <sub>
-    <img src="https://s2.loli.net/2023/06/08/2RuMymq4AwWb9js.png" height=40px width=59px>
+    <img src="https://s2.loli.net/2023/06/08/2RuMymq4AwWb9js.png" height="40" />
   </sub>
   NetManager
 </h1>
